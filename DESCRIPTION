@@ -1,0 +1,19 @@
+Package: queryPathcards
+Type: Package
+Title: Query Pathcards Package
+Version: 0.1.0
+Author: Jinwoo Lee, Kerrigan Blake
+Maintainer: Jinwoo Lee <amajinwoo@gmail.com>
+Description: Contains multiple functions for querying the website PathCards.com, scoring the pathways, and creating heatmaps.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    httr,
+    rvest,
+    stringr,
+    tidyr,
+    ggplot2,
+    Seurat
+RoxygenNote: 6.1.1
