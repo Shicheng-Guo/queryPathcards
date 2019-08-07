@@ -15,5 +15,6 @@ Imports:
     stringr,
     tidyr,
     ggplot2,
-    Seurat
+    Seurat,
+    reshape2
 RoxygenNote: 6.1.1
