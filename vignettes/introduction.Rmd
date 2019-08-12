@@ -42,10 +42,10 @@ The receptor.ligand.annotation.from.object() function has 5 parameters:
 
 ```{r}
 #Loading in the Seurat object downloaded from the website above:
+sample_seurat_object <- readRDS("~/Downloads/pbmc3k_final.rds")
 
 #Creating the sample ligand-receptor list. Be sure to name your columns as Ligand and Receptor.
 sample_list <- read.table(file = "~/Downloads/receptor_ligand_master_list.txt", sep = "\t", header = TRUE)[1:500,]
-sample_seurat_object <- readRDS("~/Downloads/pbmc3k_final.rds")
 
 sample_list_refined <- receptor.ligand.annotation.from.object(sample_seurat_object, "seurat_clusters", sample_list, 0.1, 0.2)
 ```
