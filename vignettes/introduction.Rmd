@@ -89,8 +89,6 @@ sample_scored <- scoreGenes(sample_result, sample_seurat_object, c("seurat_clust
 I created a function for creating a heatmap based on the scores. As of right now, this function will only accept the summarized data. To run the function, you need to put in (1) the scored data set, (2) the x-variable, and (3) the y-variable. The "fill=" is always Score_Average.
 
 ```{r}
-sample_scored$summarized_data$Shared_Pathway <- factor(sample_scored$summarized_data$Shared_Pathway, levels = unique(sample_scored$summarized_data$Shared_Pathway))
-
 createHeatMap(sample_scored$summarized_data, "Shared_Pathway", "seurat_clusters")
 ```
 
