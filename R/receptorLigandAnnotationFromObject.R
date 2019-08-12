@@ -43,6 +43,8 @@ receptor.ligand.annotation.from.object <- function(seurat.object, group.by, rece
   colnames(ligand_summary_subset.tmp) <- c(group.by,"variable","mean_expression","percent_expression")
 
   final.interaction.mat<-receptor.ligand.pair.annotation(receptor_summary_subset.tmp, ligand_summary_subset.tmp, receptor.ligand.mat, group.by = group.by)
-
+  
+  final.interaction.mat <- final.interaction.mat %>% separate(Ligand, c("Ligand_Ident", "Ligand"), sep = "_") %>% separate(Receptor, c("Receptor_Ident", "Receptor"), sep = "_")
+  
   return(final.interaction.mat)
 }
